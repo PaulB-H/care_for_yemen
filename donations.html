@@ -1,0 +1,176 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Care for Yemen</title>
+    <link rel="icon" type="image/png" href="images/flag_yemen.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Spartan&amp;display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    
+    <style type="text/css">
+    
+        /*Global Settings*/
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Spartan', sans-serif;
+            padding-bottom: 30px;
+        }
+        
+        #back-btn {
+            font-size: 150%;
+            margin: 10px;
+            background: #CE1126; 
+            color: white; 
+            padding: 30px; 
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            clip-path: polygon( 40% 13%, 40% 30%, 100% 30%,
+                                100% 70%, 40% 70%, 40% 87%, 0% 50%);
+            text-decoration: none;
+                                
+        }
+        #header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .carousel img {
+          display: block;
+          height: 400px;
+          border: 5px solid white;
+        }
+        
+        .footer {
+            background: #FAFAFA;
+            color: lightgray;
+            position: fixed; 
+            bottom:0; 
+            left: 0; 
+            width: 100%; 
+            height: 30px; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center
+        }
+        .footer i {
+            margin-left: 5px; 
+            margin-top: 2px; 
+            font-size: 90%;
+        }
+        .flag {
+            max-width: 50%; 
+        }
+        
+        @media only screen and (max-width: 768px) {
+            .flag {
+                max-width: 100% !important;
+                width: 100%;
+            }
+            .carousel img {
+              height: 400px;
+            }
+            #header {
+                margin-top: 75px !important;
+                margin-bottom: 10px !important;
+            }
+        }
+        
+    </style>
+    
+</head>
+<body>
+    
+    <a id="back-btn" href="https://www.careforyemen.ca/index.html">
+        Back
+    </a>
+    
+    <div id="header" style="
+        margin-top: 50px;
+    ">
+        <!--<h3>Welcome to</h3>-->
+        <h1>Care for Yemen</h1>
+        
+    </div>
+    
+    <div id="content">
+       
+        <h3 style="text-align: center; ">Here are some pictures from our first donation</h3>
+        
+        <div class="carousel"
+          data-flickity='{ "imagesLoaded": true, "percentPosition": true,
+                "wrapAround": true,
+                "autoPlay": true,
+                "autoPlay": 3000,
+                "pauseAutoPlayOnHover": false
+          }'>
+          <img src="/images/donations/donation_1/donation_1.jpg" alt="" />
+          <img src="/images/donations/donation_1/donation_2.jpg" alt="" />
+          <img src="/images/donations/donation_1/donation_3.jpg" alt="" />
+          <img src="/images/donations/donation_1/donation_4.jpg" alt="" />
+          <img src="/images/donations/donation_1/donation_5.jpg" alt="" />
+          <img src="/images/donations/donation_1/donation_6.jpg" alt="" />
+          <img src="/images/donations/donation_1/donation_7.jpg" alt="" /> 
+          <img src="/images/donations/donation_1/donation_8.jpg" alt="" /> 
+          <img src="/images/donations/donation_1/donation_9.jpg" alt="" /> 
+          <img src="/images/donations/donation_1/donation_10.jpg" alt="" /> 
+          <img src="/images/donations/donation_1/donation_11.jpg" alt="" /> 
+        </div>
+    
+    </div>
+    
+    <!-- Footer inside link container -->
+    <a href="https://www.linkedin.com/in/paulb-h/" target="_blank">
+        <div class="footer">
+            &copy; Web by Paul <i class="fas fa-link" ></i>
+         </div>
+    </a>
+        
+    <div id="my-script-box">
+        
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+        <script src="https://kit.fontawesome.com/301fc3fb33.js" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+        <script type="text/javascript">
+          
+            function autorun(){
+                clearThirdPartyScripts();
+            };
+            
+            // Below function forces player to replay after no interactin for 3 sec
+            // Flickity.prototype.stopPlayer = function() {
+            //   this.player[ action ]();
+            //   // always resume play after 3 seconds
+            //   setTimeout( () => {
+            //     this.player.play();
+            //   }, 3000 )
+            // };
+            
+            function clearThirdPartyScripts(){
+                let links = $("a");
+                let len = links.length - 1;
+                let remove = links[len];
+                let linkParent = $(remove).parent()
+                $(linkParent).remove();
+                let scripts = $("script");
+                let scriptLen = scripts.length -1;
+                let removeScript = scripts[scriptLen];
+                $(removeScript).remove();
+            }
+        
+            if (document.addEventListener) document.addEventListener("DOMContentLoaded", autorun, false);
+            else if (document.attachEvent) document.attachEvent("onreadystatechange", autorun);
+            else window.onload = autorun;
+           
+        </script>
+        
+    </div>
+    
+</body>
+</html>

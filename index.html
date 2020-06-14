@@ -1,0 +1,452 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Care for Yemen</title>
+    <link rel="icon" 
+      type="image/png" 
+      href="images/flag_yemen.svg">
+      <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&family=Playfair+Display:wght@600&display=swap" rel="stylesheet"> 
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css" integrity="sha256-f6fW47QDm1m01HIep+UjpCpNwLVkBYKd+fhpb4VQ+gE=" crossorigin="anonymous" />
+    <style type="text/css">
+    
+        /* font-family: 'Merriweather', serif; */
+        /* font-family: 'Playfair Display', serif; */
+            
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            /*background-image: url("images/socatra.jpg");*/
+        }
+        h1, h2, h3 {
+            font-family: 'Merriweather', serif;
+        }
+        p {
+            font-family: 'Playfair Display', serif;
+        }
+        .d-none {
+            display: none !important;
+        }
+        .d-display {
+            display: flex !important;
+        }
+        .mobile { color: black; }
+        .indent {
+            /*text-indent: 50px;*/
+            margin: 10px auto 10px auto;
+            text-align: center;
+            max-width: 760px;
+        }
+        
+        .image-section {
+            color: black;
+            background: white;
+            border-radius: 10px;
+            padding: 10px;
+            width: min-content;
+            min-width: max-content;
+        }
+        
+        #navbar {
+            position: fixed;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            border-bottom: 1px solid white;
+            background: white;
+            width: 100%;
+            z-index: 1;
+            border-bottom: 1px solid black;
+        }
+        #nav-link-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        #navbar a, #navbar h1 {
+            color: black;
+            text-decoration: none;
+            margin: 0 10px 0 10px;
+            white-space: nowrap;
+            font-family: ar;
+        }
+        
+        #nav-expander:hover, #nav-link-container:hover {
+            cursor: pointer;
+        }
+        
+        .content-box {
+            color: white;
+            display: flex;
+            text-align: left;
+            flex-direction: column;
+        }
+        
+        .active {
+            color: red !important;
+        }
+        
+        @media only screen and (max-width: 768px) {
+            .indent {
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+            #gallery {
+                overflow: hidden;
+            }
+            #gallery-container {
+                width: 100vw !important;
+            }
+        }
+        
+        
+    </style>
+</head>
+
+<body>
+     
+     
+    
+    <div id="navbar" class="mobile">
+        <div class="d-display" id="nav-expander">
+            <h1>Menu</h1>
+        </div>
+        <div id="nav-link-container" class="d-none">
+            <h1 id="home-btn" class="nav-link active">Home</h1>
+            <h1 id="cause-btn" class="nav-link">Cause</h1>
+            <h1 id="projects-btn" class="nav-link">Projects</h1>
+            <h1 id="donate-btn" class="nav-link">Donate</h1>
+            <h1 id="contact-btn" class="nav-link">Contact</h1>
+            <h1 id="gallery-btn" class="nav-link">Gallery</h1>
+        </div>
+    </div>
+    
+    <div id="mobile-navbar"></div>
+    
+    <div id="content" style="
+        margin: auto;
+        overflow: hidden;
+    ">
+        
+        <div id="home" class="content-box" style="
+            justify-content: center;
+            align-items: center;
+            background-image: url(images/socatra.jpg);
+        ">
+            <h1 class="image-section" style="
+                margin: 0 50px;
+                text-align: center;
+            ">Care for Yemen
+              <br>
+              <span style="white-space: nowrap;">رعاية اليمن</span>
+            </h1>
+            
+            <!--<p class="image-section" style="-->
+            <!--    text-indent: 0px;-->
+            <!--    margin: 50px;-->
+            <!--">-->
+            <!--    LOGO-->
+            <!--</p>-->
+            <img src="images/transp_logo.png">
+        </div>
+        
+        <div id="cause" class="content-box" style="
+            background: white;
+            color: black;
+            margin-top: 20px;
+        ">
+            <h1 style="text-align: center; margin-top: 20px;">Our Cause</h1>
+            <p class="indent">
+                The Prophet Muhammad (peace be upon him) said: "The believer's shade on the Day of Resurrection will
+                be his charity." - Al-Tirmidhi, Hadith 604 In the name of God, the Most Gracious, the Most
+                Merciful 
+            </p>
+            <h1 style="text-align: center; margin-top: 20px;">Care</h1>
+            <p class="indent">
+                Help us provide basic necessities (food, water, living essentials/medical amenities) to Yemen during
+                the month of Ramadan. This money will be sent directly to the hands of families and individuals who
+                are suffering from the impact of flash flooding, famine, and war. During this holy month, we aim to
+                raise at least $2,500 to provide assistance to those in need in Yemen. 
+            </p>
+            <h1 style="text-align: center; margin-top: 20px;">Campaign Story</h1>
+            <p class="indent">
+                On April 21, 2020, flash floods hit the city of Aden in Yemen, killing at least 21 people. For the
+                past five years, Yemen has been wracked by a bloody war, and the armed conflict in Yemen has resulted
+                in the largest humanitarian crisis in the world. 
+            </p>
+            <p class="indent">    
+                Due to the conflict, thousands of Yemeni civilians 
+                have been killed and injured. According to the Yemen Data Project, more than 17,500 civilians were
+                killed and injured since 2015, and a quarter of all civilians killed in air raids were women and
+                children. More than 20 million people in Yemen are experiencing food insecurity; 10 million of them
+                are at risk of famine.
+            </p>
+            <p class="indent">
+                What makes our campaign unique is our personal connection to those affected. We have been contacted by
+                friends and family in the city of Aden with constant updates on issues faced by the community. We
+                intend on providing this financial support to the people of Aden, Yemen, who are in need of our help.
+            </p>
+            <h1 style="text-align: center; margin-top: 20px;">How You Can Help</h1>
+            <p class="indent">
+                Every dollar counts. We are accepting donations on this platform as well as through Interac E-Transfer (careforyemen@gmail.com) and PayPal. Please share this campaign to others and provide them with this link so we can increase our support to the people of Yemen. If you have any questions or comments, you can also reach us with that email address as well.
+            </p>
+            <p class="indent" style="margin-bottom: 20px;"> 
+                We will also be sharing updates on where the money is going, which will demonstrate the impact of your support. Please continue to support initiatives such as these and keep the people of Yemen in your dua’as. Gain the dua’as of those who will benefit from your Sadaqah and may Allah increase your ranks and grant you Jannatul Firdaus.
+            </p>
+        </div>
+        
+        <div id="projects" class="content-box" style="
+            justify-content: center;
+            align-items: center;
+            background-image: url(images/socatra.jpg);
+        ">
+            <h1 class="image-section" style="
+                margin: 50px;
+                margin-bottom: 0;
+            ">Projects</h1>
+            <p class="image-section" style="
+                text-indent: 0px;
+                margin: 50px;
+                padding-bottom: 20px;
+            "> 
+                Project list and details
+            </p>
+        </div>
+        
+        <div id="donate" class="content-box" style="
+            background: white;
+            color: black;
+            justify-content: center;
+            align-items: center;
+        ">
+            <h1 style="
+                margin: 50px;
+                margin-bottom: 0;
+            ">Donate</h1>
+            <p style="
+                text-indent: 0px;
+                margin: 50px;
+                padding-bottom: 20px;
+            "> 
+                Goal/Progress
+            </p>
+            <div id="copy" style="
+                text-align: center; 
+                margin-bottom: 50px; 
+            ">
+                <h1>E-Transfer </h1>
+                <i class="fas fa-arrow-down" style="
+                font-size: 150%;
+            "></i>
+                <p>careforyemen@gmail.com</p>
+                <p>(Click to copy email)</p>
+            </div>
+            <h1>Paypal</h1>
+            <i class="fas fa-arrow-down" style="
+                font-size: 150%;
+            "></i>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_donations" />
+                <input type="hidden" name="business" value="XUPW2VQL58KSL" />
+                <input type="hidden" name="currency_code" value="CAD" />
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+                <img alt="" border="0" src="https://www.paypal.com/en_CA/i/scr/pixel.gif" width="1" height="1" />
+            </form>
+            
+        </div>
+        
+        <div id="contact" class="content-box" style="
+            justify-content: center;
+            align-items: center;
+            background-image: url(images/socatra.jpg);
+        ">
+            <h1 class="image-section" style="
+                margin: 50px;
+                margin-bottom: 0;
+            ">Contact</h1>
+            <p class="image-section" style="
+                text-indent: 0px;
+                margin: 50px;
+            "> 
+                <a style="border-radius: 10px;" href="https://www.instagram.com/careforyemen/">
+                    <img style="height: 100px; border-radius: 10px;" src="images/logo_instagram.jpg">
+                </a>
+            </p>
+        </div>
+        
+        <div id="gallery" class="content-box" style="
+            background: white;
+            color: black;
+            justify-content: center;
+            align-items: center;
+            position: relative; 
+        ">
+            <h1 style="
+                margin: 50px;
+                margin-bottom: 0;
+                position: absolute;
+                top: 0;
+            ">Gallery</h1>
+            <div id="gallery-container" style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            "> 
+                <i class="fa fa-arrow-left" aria-hidden="true" style="
+                    position: absolute;
+                    left: 10px;
+                    font-size: 3em;
+                    color: white;
+                    text-shadow: yellow;
+                    -webkit-text-stroke: 2px black;
+                "></i>
+
+                <img src="https://picsum.photos/1200/900" style="
+                    max-height: 100%;
+                    max-width: 100%;
+                ">
+                <i class="fa fa-arrow-right" aria-hidden="true" style="
+                    position: absolute;
+                    right: 10px;
+                    font-size: 3em;
+                    color: white;
+                    text-shadow: yellow;
+                    -webkit-text-stroke: 2px black;
+                "></i>
+                
+                
+
+            </div>
+        </div>
+        
+    
+    </div>
+    
+    <!-- Footer inside link container -->
+    
+        
+  
+    <div id="my-script-box">
+        
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+        <script src="https://kit.fontawesome.com/301fc3fb33.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js" integrity="sha256-321PxS+POvbvWcIVoRZeRmf32q7fTFQJ21bXwTNWREY=" crossorigin="anonymous"></script>
+        
+
+        <script type="text/javascript">
+            var navHeight = $("#navbar").height();
+            var viewHeight = window.innerHeight;
+            var adjusted = viewHeight - navHeight;
+            $(".content-box").css("min-height", adjusted);
+            // Gallery container min height was adjusted -40 before?
+            $("#gallery-container").css("min-height", adjusted );
+            // Actually.... why was this setting here...
+            $("#content").css("margin-top", navHeight);
+            
+            
+            $("#home-btn").click(function() {
+                $("#nav-link-container").toggleClass("d-none");
+                $(".nav-link").removeClass("active");
+                $(this).addClass("active");
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $("#home").offset().top - navHeight
+                }, 1500);
+            });
+            $("#cause-btn").click(function() {
+                $("#nav-link-container").toggleClass("d-none");
+                $(".nav-link").removeClass("active");
+                $(this).addClass("active");
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $("#cause").offset().top - navHeight
+                }, 1500);
+            });
+            $("#projects-btn").click(function() {
+                $("#nav-link-container").toggleClass("d-none");
+                $(".nav-link").removeClass("active");
+                $(this).addClass("active");
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $("#projects").offset().top - navHeight
+                }, 1500);
+            });
+            $("#donate-btn").click(function() {
+                $("#nav-link-container").toggleClass("d-none");
+                $(".nav-link").removeClass("active");
+                $(this).addClass("active");
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $("#donate").offset().top - navHeight
+                }, 1500);
+            });
+            $("#contact-btn").click(function() {
+                $("#nav-link-container").toggleClass("d-none");
+                $(".nav-link").removeClass("active");
+                $(this).addClass("active");
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $("#contact").offset().top - navHeight
+                }, 1500);
+            });
+            $("#gallery-btn").click(function() {
+                $("#nav-link-container").toggleClass("d-none");
+                $(".nav-link").removeClass("active");
+                $(this).addClass("active");
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $("#gallery").offset().top - navHeight
+                }, 1500);
+            });
+            
+            $("#nav-expander").click(function(){
+                $("#nav-link-container").toggleClass("d-none")
+            });
+            
+            function copy() {
+                navigator.clipboard.writeText("careforyemen@gmail.com")
+                    .then(function() {
+                      /* clipboard successfully set */
+                    }, function() {
+                      /* clipboard write failed */
+                    });
+
+                iziToast.info({
+                    title: 'Copied email!',
+                    position: 'center',
+                    pauseOnHover: 'false',
+                });
+            }
+            
+            document.querySelector("#copy").addEventListener("click", copy);
+          
+            function autorun(){
+                clearThirdPartyScripts();
+                if ($("html").width() > 886){
+                    $("#navbar").removeClass("mobile");
+                    $("#nav-expander").removeClass("d-display").addClass("d-none");
+                    $("#nav-link-container").removeClass("d-none").addClass("d-display");
+                }
+            };
+            
+            function clearThirdPartyScripts(){
+                let links = $("a");
+                let len = links.length - 1;
+                let remove = links[len];
+                let linkParent = $(remove).parent()
+                $(linkParent).remove();
+                let scripts = $("script");
+                let scriptLen = scripts.length -1;
+                let removeScript = scripts[scriptLen];
+                $(removeScript).remove();
+            }
+        
+            if (document.addEventListener) document.addEventListener("DOMContentLoaded", autorun, false);
+            else if (document.attachEvent) document.attachEvent("onreadystatechange", autorun);
+            else window.onload = autorun;
+           
+        </script>
+        
+    </div>
+    
+</body>
+</html>
