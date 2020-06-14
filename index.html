@@ -286,14 +286,13 @@
             align-items: center;
             position: relative; 
         ">
-            <h1 style="
+            <h1 class="image-section" style="
                 margin: 50px;
                 margin-bottom: 0;
                 position: absolute;
                 top: 0;
             ">Gallery</h1>
             <div id="gallery-container" style="
-                display: flex;
                 justify-content: center;
                 align-items: center;
             "> 
@@ -304,12 +303,62 @@
                     color: white;
                     text-shadow: yellow;
                     -webkit-text-stroke: 2px black;
+                    bottom: 50%;
                 "></i>
 
-                <img src="https://picsum.photos/1200/900" style="
-                    max-height: 100%;
-                    max-width: 100%;
+                <div id="pauls-carousel" style="
+                    display: flex;
+                    height: 100%;
+                    justify-content: center;
+                    align-items: center;
                 ">
+                    <img class="d-none" src="images/donations/donation_1/donation_1.jpg" style="
+                        max-height: 100%;
+                        max-width: 100%;
+                    ">
+                    <img class="d-none" src="images/donations/donation_1/donation_2.jpg" style="
+                        max-height: 100%;
+                        max-width: 100%;
+                    ">
+                    <img class="d-none" src="images/donations/donation_1/donation_3.jpg" style="
+                        max-height: 100%;
+                        max-width: 100%;
+                    ">
+                    <img class="d-none" src="images/donations/donation_1/donation_4.jpg" style="
+                        max-height: 100%;
+                        max-width: 100%;
+                    ">
+                    <img class="d-none" src="images/donations/donation_1/donation_5.jpg" style="
+                        max-height: 100%;
+                        max-width: 100%;
+                    ">
+                    <img class="d-none" src="images/donations/donation_1/donation_6.jpg" style="
+                        max-height: 100%;
+                        max-width: 100%;
+                    ">
+                    <img class="d-none" src="images/donations/donation_1/donation_7.jpg" style="
+                        max-height: 100%;
+                        max-width: 100%;
+                    ">
+                    <img class="d-none" src="images/donations/donation_1/donation_8.jpg" style="
+                        max-height: 100%;
+                        max-width: 100%;
+                    ">
+                    <img class="d-none" src="images/donations/donation_1/donation_9.jpg" style="
+                        max-height: 100%;
+                        max-width: 100%;
+                    ">
+                    <img class="d-none" src="images/donations/donation_1/donation_10.jpg" style="
+                        max-height: 100%;
+                        max-width: 100%;
+                    ">
+                    <img class="d-none" src="images/donations/donation_1/donation_11.jpg" style="
+                        max-height: 100%;
+                        max-width: 100%;
+                    ">
+                    
+                </div>
+
                 <i class="fa fa-arrow-right" aria-hidden="true" style="
                     position: absolute;
                     right: 10px;
@@ -317,6 +366,7 @@
                     color: white;
                     text-shadow: yellow;
                     -webkit-text-stroke: 2px black;
+                    bottom: 50%;
                 "></i>
                 
                 
@@ -331,7 +381,7 @@
     
         
   
-    <div id="my-script-box">
+    <div id="my-script-box" style="display: none;">
         
         <script
 			  src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -347,7 +397,7 @@
             var adjusted = viewHeight - navHeight;
             $(".content-box").css("min-height", adjusted);
             // Gallery container min height was adjusted -40 before?
-            $("#gallery-container").css("min-height", adjusted );
+            $("#gallery-container").css("height", adjusted );
             // Actually.... why was this setting here...
             $("#content").css("margin-top", navHeight);
             
@@ -441,6 +491,48 @@
                 let scriptLen = scripts.length -1;
                 let removeScript = scripts[scriptLen];
                 $(removeScript).remove();
+            }
+            
+            let images = $("#pauls-carousel img");
+            var carouselIterator = 0;
+
+            var active = images[0];
+            active.classList.remove("d-none")
+            active.classList.add("active");
+
+            document.getElementsByClassName("fa-arrow-right")[0].addEventListener("click", rightClick);
+            document.getElementsByClassName("fa-arrow-left")[0].addEventListener("click", leftClick);
+
+            function rightClick(){
+                console.log("right clicked")
+                console.log(carouselIterator);
+                images[carouselIterator].classList.remove("active");
+                images[carouselIterator].classList.add("d-none");
+                if (carouselIterator == 10){
+                    carouselIterator = 1;
+                    images[carouselIterator].classList.add("active");
+                    images[carouselIterator].classList.remove("d-none");
+                }else {
+                    carouselIterator ++;
+                    images[carouselIterator].classList.add("active");
+                    images[carouselIterator].classList.remove("d-none");
+                }
+            }
+            
+            function leftClick(){
+                console.log("left clicked")
+                console.log(carouselIterator);
+                images[carouselIterator].classList.remove("active");
+                images[carouselIterator].classList.add("d-none");
+                if (carouselIterator == 0){
+                    carouselIterator = 10;
+                    images[carouselIterator].classList.add("active");
+                    images[carouselIterator].classList.remove("d-none");
+                }else {
+                    carouselIterator --;
+                    images[carouselIterator].classList.add("active");
+                    images[carouselIterator].classList.remove("d-none");
+                }
             }
         
             if (document.addEventListener) document.addEventListener("DOMContentLoaded", autorun, false);
