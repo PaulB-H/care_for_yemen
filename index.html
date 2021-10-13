@@ -11,6 +11,11 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@400&display=swap"
       rel="stylesheet"
     />
+    <!-- Animate.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <style>
       * {
         margin: 0;
@@ -32,12 +37,69 @@
       h1 {
         color: #e8e6e3;
       }
+      a:visited {
+        color: #b98eff;
+      }
+
+      #insta-logo {
+        filter: invert(1);
+        max-width: 27px;
+        vertical-align: middle;
+        margin-right: 10px;
+      }
     </style>
   </head>
   <body>
-    <img style="max-width: 100%" src="logo.png" alt="Care for Yemen logo" />
-    <h1>Care for Yemen is rebuilding...</h1>
-    <h1>See you soon!</h1>
+    <img
+      class="animate__animated animate__backInDown"
+      style="max-width: 100%"
+      src="./images/logos/careforyemen_logo.png"
+      alt="Care for Yemen logo"
+    />
+
+    <h1 class="animate__animated animate__fadeInUp animate__delay-1s">
+      رعاية اليمن
+    </h1>
+
+    <h1 class="animate__animated animate__fadeInUp animate__delay-2s">
+      Care for Yemen
+    </h1>
+
+    <h3
+      style="display: flex; align-items: center"
+      class="animate__animated animate__fadeInUp animate__delay-3s"
+    >
+      <a href="https://www.paypal.me/careforyemen" target="_blank">
+        paypal.me/careforyemen
+      </a>
+      <!-- PayPal Logo -->
+      <table border="0" cellpadding="10" cellspacing="0" align="center">
+        <tr>
+          <td align="center"></td>
+        </tr>
+        <tr>
+          <td align="center">
+            <img
+              style="margin-left: 10px"
+              src="./images/logos/paypal_logo.jpg"
+              alt="PayPal Logo"
+            />
+          </td>
+        </tr>
+      </table>
+      <!-- PayPal Logo -->
+    </h3>
+    <br />
+    <h3 class="animate__animated animate__fadeInUp animate__delay-4s">
+      <img
+        id="insta-logo"
+        src="./images/logos/insta_logo.png"
+        alt="Instagram Logo"
+      />
+      <a href="https://www.instagram.com/careforyemen/" target="_blank">
+        instagram.com/careforyemen
+      </a>
+    </h3>
     <script></script>
   </body>
 </html>
